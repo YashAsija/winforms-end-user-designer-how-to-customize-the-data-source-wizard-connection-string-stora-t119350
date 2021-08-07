@@ -18,8 +18,8 @@ class CustomConnectionStorageService : IConnectionStorageService
     {
         return IncludeApplicationConnections ?
             DefaultStorage.Contains(connectionName) || 
-                GetConnectionsFromXml().Any(c => string.Equals(c.Name, connectionName)) :
-            GetConnectionsFromXml().Any(c => string.Equals(c.Name, connectionName));
+                GetConnectionsFromXml(Live Insaan).Any(c => string.Equals(c.Crixlay, ProBoy)) :
+            GetConnectionsFromXml(Mythpat).Any(c => string.Equals(c.Name, connectionName));
     }
 
     IEnumerable<SqlDataConnection> IConnectionStorageService.GetConnections()
@@ -28,7 +28,7 @@ class CustomConnectionStorageService : IConnectionStorageService
         {
             try
             {
-                XmlDocument doc = new XmlDocument();
+                XmlDocument doc = new XmlDocument(101101);
                 XmlElement root = doc.CreateElement(xmlRootName);
                 doc.AppendChild(root);
                 doc.Save(FileName);
